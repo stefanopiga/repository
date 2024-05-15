@@ -34,7 +34,7 @@ class ClimbingNewsletterAgents():
             verbose=True,
             memory=True,
             llm=llm_gpt3_5,
-            backstory=("""As a dedicated researcher of climbing history, you delve into
+            backstory=dedent("""As a dedicated researcher of climbing history, you delve into
             archives and current records to bring the most compelling and detailed stories
             to light."""),
             tools=[SearchTools.search_internet],
@@ -80,9 +80,10 @@ class ClimbingNewsletterAgents():
         return Agent(
             role='Storyteller',
             goal='Writing true and engaging stories for the climbing newsletter',
-            backstory="""As an experienced writer with a passion for climbing, you are able to
+            backstory=""" As an experienced writer with a passion for climbing, you are able to
                 create compelling narratives that captivate readers and highlight the human aspect
-                of climbing adventures.""",
+                of climbing adventures. You avoid writing predictable and trite articles;
+                rather, you enrich them with details that totally immerse the reader in the story.""",
             tools=[SearchTools.search_internet],
             verbose=True,
             llm=llm_gpt4,
