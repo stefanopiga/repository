@@ -67,7 +67,7 @@ class ClimbingNewsletterAgents():
 #        try:
 #            self.check_token_limit(500)
         return Agent(
-            role='NewsFetcher',
+            role='News Fetcher',
             goal=dedent(f"""\
                 Research and fetch detailed stories and biographical
                 elements of iconic climber: {self.climber_name}"""),
@@ -92,7 +92,7 @@ class ClimbingNewsletterAgents():
 #        self.check_token_limit(500)
 
         return Agent(
-            role='NewsAnalyzer',
+            role='News Analyzer',
             goal=dedent(f"""\
                 Analyzes each information, story and element and generates
                 a cohesive, readable and detailed summary in markdown about {self.climber_name}"""),
@@ -117,7 +117,7 @@ class ClimbingNewsletterAgents():
 #        self.check_token_limit(500)
 
         return Agent(
-            role='NewsletterCompiler',
+            role='Newsletter Compiler',
             goal=dedent("""\
                 Compile the analyzed informations into a final newsletter format"""),
             backstory=dedent("""\

@@ -1,0 +1,35 @@
+
+[tool.poetry]
+name = "variante YAML"
+version = "0.1.0"
+description = ""
+authors = ["Stefano Piga"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = {extras = ["tools"], version = "^0.28.8"}
+pydantic = "^2.6.3"
+load-dotenv = "^0.1.0"
+agentops = "^0.1.6"
+duckduckgo-search = "^4.4.2"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.3"
+langchain-groq = "^0.1.3"
+
+[tool.poetry.scripts]
+youtube_yapper_trapper = "youtube_yapper_trapper.main:run"
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+# https://beta.ruff.rs/docs/configuration/
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+

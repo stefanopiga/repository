@@ -1,0 +1,54 @@
+
+#definizione dei Tasks
+
+fetch_news_task:
+  description: >
+    Gather and refine valuable information about {self.climber_name}.
+    Remember that your output is the first brick to reach the final goal,
+    so the quality of your next job depends on the quality of your work, so do your best!
+
+  expected_output: >
+    It is very impoprtant that the format of the output follows the pattern shown in task_description.
+    Here the template: {task_description}
+
+analyze_news_task:
+  description: >
+    Thoroughly analyze the context provided by the previous task and extract
+    valuable information rich in details critical to creating a compelling and exciting newsletter.
+    It is very important to follow the pattern shown in markdown_output.
+    Here the template: {markdown_output}
+
+  expected_output: >
+    Markdown formatted output saved.
+
+compile_newsletter_task:
+  description: >
+    Use the provided context to compile and format the newsletter in Markdown;
+    include enough information to be able, in the next task, to write a 2000-word article,
+    so it will be useful to take full advantage of the context. The work done is essential for
+    a quality end result, so commit to providing the best context for the next task.
+
+  expected_output: >
+    A complete newsletter in markdown format, ready for final article
+    composition. It is very important to follow the pattern shown in newsletter_content.
+    Here the template: {newsletter_content}
+
+  write_story_task:
+    description: >
+      Using the detailed content provided by the "context",
+      create an engaging and inspiring story that captures the essence of the results and the story of {self.climber_name}.
+      The story should be structured with about 2,000 words, and should include:
+
+      - An engaging introduction that draws the reader in.
+      - A narrative details one or two climbs; enrich with details such as difficulty grades, environmental conditions, context.
+      - Personal details, trivia and anecdotes.
+      - Descriptions that bring climbs and experiences to life.
+      - Interesting conclusions that reflect on the mountaineer's legacy and impact on the community.
+
+      The narrative should be well paced, using a conversational but structured style to make the content relatable and impactful.
+
+    expected_output: >
+      A perfectly packaged story in TEXT FORMAT, ready to be
+      included in the weekly newsletter. The story should be structured with about 2,000 words, must be inspirational,
+      using a practical language style to connect deeply with readers.
+      Remember to respect the details in 'description' and enrich the story with details provided by the context
