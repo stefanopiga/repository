@@ -8,9 +8,13 @@ import os
 from dotenv import load_dotenv
 import platform
 import re
+import random
 import time as t
 from datetime import datetime, time
 from statistics import mean
+
+
+
 
 load_dotenv()
 
@@ -163,6 +167,9 @@ def filter_ads_by_price(min_price_stat, max_price_stat, target_model, filters):
 # Run a query on Subito.it
 
 
+import random
+import time
+
 def run_query(url, name, notify, minPrice, maxPrice, filters):
     print(datetime.now().strftime("%Y-%m-%d, %H:%M:%S") +
           f" Running query (\"{name}\" - {url})...")
@@ -171,15 +178,26 @@ def run_query(url, name, notify, minPrice, maxPrice, filters):
     all_prices = []
     page_number = 1  # Per gestire la paginazione
 
+    # Definisci gli headers per rendere la richiesta più simile a quella di un browser
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Connection": "keep-alive"
+    }
+
     while True:
         paginated_url = f"{url}&o={page_number}"
-        page = requests.get(paginated_url)
+        
+        # Esegui la richiesta HTTP con gli headers
+        page = requests.get(paginated_url, headers=headers)
+
         # Crea il soup per analizzare l'HTML della pagina
         soup = BeautifulSoup(page.text, 'html.parser')
         
         # Aggiungi questo blocco per salvare l'HTML in un file per il debug
         with open(f"debug_page_{page_number}.html", "w", encoding="utf-8") as file:
             file.write(soup.prettify())
+        
         product_list_items = soup.find_all('div', class_=re.compile(r'item-card'))
 
         if not product_list_items:
@@ -204,10 +222,14 @@ def run_query(url, name, notify, minPrice, maxPrice, filters):
             if model:
                 all_prices.append({'model': model.lower(), 'price': price})
 
+        # Aggiungi il ritardo casuale tra le richieste
+        time.sleep(random.uniform(5, 15))
+
         page_number += 1  # Passa alla pagina successiva
 
     # Dopo aver raccolto tutti i dati, procedi con il calcolo
     process_collected_data(all_prices, filters)
+
 
 # Send Telegram notifications
 
