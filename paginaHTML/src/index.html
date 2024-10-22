@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Stefano Borgato asd">
+    <meta name="description" content="pagina html scritta durante il corso html & css">
+
+    <title>PAGINA I</title>
+
+    <!-- qui sotto i 4 tag di metadati secondo l'OPENGRAPH PROTOCOL -->
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="video.movie">
+    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/">
+    <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="images/banner-favicon.ico">
+
+
+</head>
+
+<body>
+
+    <!--  barra navigazione  -->
+
+
+    <div>
+        <nav class="nav collapsible">
+            <a class="nav__logo" href="/"><img src="images/logoP.svg" alt="logo"></a>
+            <svg class="icon icon--white nav__toggle">
+                <use xlink:href="images/sprite.svg#menu"></use>
+            </svg>
+            <ul class="list collapsible__content nav__list">
+                <li class="nav__item"><a href="#">Hosting</a></li>
+                <li class="nav__item"><a href="#">VPS</a></li>
+                <li class="nav__item"><a href="#">Domain</a></li>
+                <li class="nav__item"><a href="#">Pricing</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--  hero  -->
+
+    <section class="block block--path-skewed-left color-dark1 hero">
+        <div class="container grid grid--1x2">
+            <header class="block__header hero__content">
+
+                <h1 class="block__heading hero__header">lorem ipsum sim amet</h1>
+                <p class="hero__tagline">metti le basi per un sito in medo di 60 secondi</p>
+                <div class="hero__btn">
+                    <a href="#" class="btn btn--accent btn--large">get started</a>
+                </div>
+
+            </header>
+            <picture class="hero__banner">
+                <source type="image/webp" srcset="images/RESIZED/banner@1x.webp 1x, images/RESIZED/banner@2x.webp 2x">
+                <source type="image/png" srcset="images/RESIZED/banner@1x.png 1x, images/RESIZED/banner@2x.png 2x">
+                <img class="hero__img" src="images/RESIZED/banner@2x.png" alt="hero image" loading="lazy">
+            </picture>
+        </div>
+    </section>
+
+    <!--  domain block  -->
+
+    <section class="block container block-domain">
+        <header class="block__header">
+            <h2 class="block__heading">lorem ipsum dolor sit amet consecutor </h2>
+            <p class="block__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium minus,
+                laudantium illo corporis ullam eligendi.</p>
+        </header>
+        <div class="input-group">
+            <input type="text" class="input" placeholder="Enter domain name here...">
+            <button class="btn btn--accent"> <svg class="icon">
+                    <use href="images/sprite.svg#search"></use>
+                </svg>search</button>
+        </div>
+        <ul class="list list--inline block-domain__price">
+            <li class="list__item">.com $9.26</li>
+            <li class="list__item"><span class="badge badge--secondary">.sg $7.91</span></li>
+            <li class="list__item">.space $12.98</li>
+            <li class="list__item">.info $14.15</li>
+            <li class="list__item">.net $16.15</li>
+            <li class="list__item">.xyz $15.18</li>
+            <li class="list__item capitalize">more</li>
+        </ul>
+    </section>
+
+
+    <!--                 -->
+    <!-- BLOCCO FEATURE  -->
+    <!--                 -->
+
+    <!--  sezione  -->
+
+    <section class="block container feature" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+        <!--  intestazione    -->
+
+        <header class="block__header feature__heading">
+            <h2 class="block__heading">lorem ipsum dolor sit amet consecutor</h2>
+            <p class="block__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium minus,
+                laudantium illo corporis ullam eligendi.</p>
+        </header>
+
+        <!-- griglia feature   -->
+
+
+        <div class="grid grid--1x2 feature__content">
+
+            <!-- contenuto    -->
+
+            <div class="media feature__media" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                data-aos-delay="100" data-aos-offset="0">
+                <div class="media__img">
+                    <span class="icon-container">
+                        <svg class="icon icon--primary icon--search">
+                            <use xlink:href="images/sprite.svg#easy"></use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="media__body">
+                    <h3 class="media__title">easy start &amp; managed updates</h3>
+                    <p class="media__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam labore velit nihil
+                        porro
+                        doloremque consequatur accusamus natus tempora quibusdam!</p>
+                </div>
+            </div>
+
+            <!-- immagine   -->
+
+            <picture data-aos="zoom-in-left">
+                <source type="image/webp" srcset="images/grafico1.webp">
+                <img class="feature_img" src="images/grafico1.jpg" alt="grafico rappresentativo 1">
+            </picture>
+
+            <!-- fine sezione    -->
+        </div>
+    </section>
+
+    <!--  sezione  -->
+
+    <section class="block container feature" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+        <!--  intestazione    -->
+
+        <header class="block__header feature__heading">
+            <h2 class="block__heading">lorem ipsum dolor sit amet consecutor</h2>
+            <p class="block__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium minus,
+                laudantium illo corporis ullam eligendi.</p>
+        </header>
+
+        <!-- griglia feature   -->
+
+
+        <div class="grid grid--1x2 feature__content">
+
+            <!-- immagine   -->
+
+            <picture data-aos="zoom-in-right">
+                <source type="image/webp" srcset="images/grafico2.webp">
+                <img class="feature_img" src="images/grafico2.jpg" alt="grafico rappresentativo 1">
+            </picture>
+
+            <!-- contenuto    -->
+
+            <div class="media feature__media" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                data-aos-delay="100" data-aos-offset="0">
+                <div class="media__img">
+                    <span class="icon-container">
+                        <svg class="icon icon--primary icon--search">
+                            <use xlink:href="images/sprite.svg#easy"></use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="media__body">
+                    <h3 class="media__title">easy start &amp; managed updates</h3>
+                    <p class="media__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam labore velit nihil
+                        porro
+                        doloremque consequatur accusamus natus tempora quibusdam!</p>
+                </div>
+            </div>
+            <!-- fine sezione    -->
+        </div>
+    </section>
+
+    <!--                        -->
+    <!--   BLOCK TESTIMONIAL    -->
+    <!--                        -->
+
+    <section class="block block-testimonial">
+
+        <header class="block__header txt-c">
+            <h2 class="block__heading">what our costumer are saing</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Neque.
+            </p>
+        </header>
+        <div class="container">
+            <div class="card testimonial">
+                <div class="grid grid--1x2">
+                    <div class="testimonial__img-container">
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/RESIZED/impiegato@1x.webp 1x,images/RESIZED/impiegato@2x.webp 2x ">
+                            <source type="image/png"
+                                srcset="images/RESIZED/impiegato@1x.png 1x,images/RESIZED/impiegato@2x.png 2x ">
+
+
+                            <img class="testimonial__img" src="images/impiegato.png" alt="foto impiegato">
+                        </picture>
+                        <span class="icon-container icon-container--accent">
+                            <svg class="icon icon--white icon--small">
+                                <use xlink:href="images/sprite.svg#quotes"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <blockquote class="quote">
+                        <p class="quote__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                            eaque
+                            itaque ut suscipit quis natus vero tempora dolorum? Adipisci aperiam dolor iusto minima
+                            recusandae
+                            eum nulla iste repellendus eligendi aliquam.</p>
+                        <footer>
+                            <div class="media">
+                                <div class="media__img">
+                                    <svg class="icon icon--primary quote__line">
+                                        <use xlink:href="images/sprite.svg#line"></use>
+                                    </svg>
+                                </div>
+                                <div class="media__body">
+                                    <h3 class="media__title quote__author">tizio caio</h3>
+                                    <p class="media__description">hGears s.p.a.</p>
+                                </div>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--        -->
+    <!-- FOOTER -->
+    <!--        -->
+
+
+    <footer class="block color-dark1 footer">
+        <nav class="container grid footer__sections">
+            <section class="collapsible collapsible--expanded footer__section">
+                <heading class="collapsible__header footer__header">
+                    <h2 class="collapsible__heading footer__heading">product</h2>
+                    <svg class="icon icon--white collapsible__chevron">
+                        <use xlink:href="images/sprite.svg#chevron"></use>
+                    </svg>
+                </heading>
+                <ul class="list collapsible__content nav__list capitalize">
+                    <li class="nav__item"><a href="#">wordpress</a></li>
+                    <li class="nav__item"><a href="#">free automated wordpress</a></li>
+                    <li class="nav__item"><a href="#">migrations</a></li>
+                    <li class="nav__item"><a href="#">domain names</a></li>
+                </ul>
+            </section>
+            <section class="collapsible footer__section">
+                <heading class="collapsible__header footer__header">
+                    <h2 class="collapsible__heading footer__heading">company</h2>
+                    <svg class="icon icon--white collapsible__chevron">
+                        <use xlink:href="images/sprite.svg#chevron"></use>
+                    </svg>
+                </heading>
+                <ul class="list collapsible__content nav__list capitalize">
+                    <li class="nav__item"><a href="#">about</a></li>
+                    <li class="nav__item"><a href="#">affiliates</a></li>
+                    <li class="nav__item"><a href="#">blog</a></li>
+                    <li class="nav__item"><a href="#">careers</a></li>
+                    <li class="nav__item"><a href="#">community</a></li>
+                    <li class="nav__item"><a href="#">news</a></li>
+                    <li class="nav__item"><a href="#">green hosting</a></li>
+
+                </ul>
+            </section>
+            <section class="collapsible footer__section">
+                <heading class="collapsible__header footer__header">
+                    <h2 class="collapsible__heading footer__heading">support</h2>
+                    <svg class="icon icon--white collapsible__chevron">
+                        <use xlink:href="images/sprite.svg#chevron"></use>
+                    </svg>
+                </heading>
+                <ul class="list collapsible__content nav__list capitalize">
+                    <li class="nav__item"><a href="#">contact</a></li>
+                    <li class="nav__item"><a href="#">knowledge base</a></li>
+                    <li class="nav__item"><a href="#">forums</a></li>
+                    <li class="nav__item"><a href="#">system status</a></li>
+                    <li class="nav__item"><a href="#">web hosting</a></li>
+                    <li class="nav__item"><a href="#">dreamCompute</a></li>
+                </ul>
+            </section>
+            <section class="collapsible footer__section">
+                <heading class="collapsible__header footer__header">
+                    <h2 class="collapsible__heading footer__heading">domains</h2>
+                    <svg class="icon icon--white collapsible__chevron">
+                        <use xlink:href="images/sprite.svg#chevron"></use>
+                    </svg>
+                </heading>
+                <ul class="list collapsible__content nav__list capitalize">
+                    <li class="nav__item"><a href="#">domain checker</a></li>
+                    <li class="nav__item"><a href="#">domain transfer</a></li>
+                    <li class="nav__item"><a href="#">free domain</a></li>
+                    <li class="nav__item"><a href="#">XYZ domain</a></li>
+                    <li class="nav__item"><a href="#">cheap SSL certificate</a></li>
+                </ul>
+            </section>
+
+            <section class="footer__brand">
+                <img src="./images/logoP.svg" alt="logo">
+                <p class="footer__copyright">
+                    copyright 2020 Steven Spielberg
+                </p>
+            </section>
+        </nav>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
